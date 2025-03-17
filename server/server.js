@@ -2,7 +2,6 @@ const express = require('express');
 const mongoose = require('mongoose')
 const cors = require('cors');
 const registerModel = require('./models/User')
-const path = require("path");
 
 const app = express();
 app.use(express.json());
@@ -39,12 +38,6 @@ app.post('/home',(req,res) => {
     .catch(err => res.json(err))
 })
   
-
-app.use(express.static(path.join(__dirname, "signup/build")));
-
-app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "signup/build", "index.html"));
-});
 
 app.listen(5000, () => {
     console.log('Server is running on port 5000');
