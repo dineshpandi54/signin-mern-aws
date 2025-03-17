@@ -16,7 +16,7 @@ const Home = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     await axios
-      .post("http://localhost:5000/home", {
+      .post("http://3.92.122.194:5000/home", {
         hobby,
         language,
         occupation,

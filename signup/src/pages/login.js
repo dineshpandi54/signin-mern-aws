@@ -12,7 +12,7 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await axios.post("http://localhost:5000/login", { email, password })
+    await axios.post("http://3.92.122.194:5000/login", { email, password })
       .then((result) => {
         console.log(result);
         if (result.data === "success") {
